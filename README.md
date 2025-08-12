@@ -29,29 +29,3 @@ This project is organized into three distinct components. Click into any directo
 *   **`/client`**: A demonstration game client built in Godot. It interfaces with a "headless" Rust networking library via GDExtension, creating a clean separation between game UI (GDScript) and core logic (Rust).
 *   **`/deployment`**: Declarative, production-ready infra as code for deploying the entire server stack (game server, social server, and PostgreSQL database) to a Kubernetes cluster.
 
----
-
-## Architecture Diagram
-
-```mermaid
-graph TD
-    subgraph Client
-        A[Godot Client (Rust GDExtension)]
-    end
-
-    subgraph Server Infrastructure (Bare-Metal Kubernetes)
-        subgraph Game Server Pod
-            B[Bevy ECS Server (Rust/UDP)]
-        end
-        subgraph Social Server Pod
-            C[WebSocket Server (Rust)]
-        end
-        subgraph Database Pod
-            D[PostgreSQL (StatefulSet)]
-        end
-    end
-
-    A -- UDP (Game State) --> B
-    A -- WebSocket (Chat) --> C
-    B -- Async SQLx --> D
-    C -- Async SQLx --> D 
