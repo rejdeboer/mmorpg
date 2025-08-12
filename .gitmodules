@@ -1,0 +1,9 @@
+[submodule "server"]
+	path = server
+	url = git@github.com:rejdeboer/mmo-server
+[submodule "client"]
+	path = client
+	url = git@github.com:rejdeboer/mmo-client
+[submodule "deployment"]
+	path = deployment
+	url = git@github.com:rejdeboer/mmo-deployment
