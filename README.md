@@ -27,5 +27,5 @@ This project is organized into three distinct components. Click into any directo
 
 *   **`/server`**: The heart of the project. A multi-threaded, asynchronous Rust application built on Bevy that manages all game logic, state, and networking.
 *   **`/client`**: A demonstration game client built in Godot. It interfaces with a "headless" Rust networking library via GDExtension, creating a clean separation between game UI (GDScript) and core logic (Rust).
-*   **`/deployment`**: Declarative, production-ready infra as code for deploying the entire server stack (game server, social server, and PostgreSQL database) to a Kubernetes cluster.
+*   **`/deployment`**: Declarative infra as code for deploying the entire server stack (game server, social server, and PostgreSQL database) to a Kubernetes cluster.
 
