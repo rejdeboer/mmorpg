@@ -1,9 +1,12 @@
 [submodule "server"]
 	path = server
 	url = git@github.com:rejdeboer/mmo-server
+	branch = main
 [submodule "client"]
 	path = client
 	url = git@github.com:rejdeboer/mmo-client
+	branch = main
 [submodule "deployment"]
 	path = deployment
 	url = git@github.com:rejdeboer/mmo-deployment
+	branch = main
